@@ -19,6 +19,12 @@ variable "project_id" {
   description = "The project ID to deploy to"
 }
 
+variable "source_image_tag" {
+  type        = string
+  description = "Image tag for all source images"
+  default     = "latest"
+}
+
 variable "region" {
   type        = string
   description = "The Compute Region to deploy to"
