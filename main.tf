@@ -19,8 +19,8 @@ data "google_project" "project" {
 }
 
 locals {
-  api_image = "gcr.io/${var.project_id}/todo-api-postgres:${var.source_image_tag}"
-  fe_image  = "gcr.io/${var.project_id}/todo-fe:${var.source_image_tag}"
+  api_image = "gcr.io/${var.source_image_project_id}/todo-api-postgres:${var.source_image_tag}"
+  fe_image  = "gcr.io/${var.source_image_project_id}/todo-fe:${var.source_image_tag}"
 }
 
 module "project-services" {
