@@ -13,16 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
-variable "project_id" {
+variable "source_image_project_id" {
   type        = string
-  description = "The project ID to deploy to"
+  description = "The project ID where source images are stored"
+  default     = "sic-container-repo"
 }
 
 variable "source_image_tag" {
   type        = string
   description = "Image tag for all source images"
   default     = "latest"
+}
+
+variable "project_id" {
+  type        = string
+  description = "The project ID to deploy to"
 }
 
 variable "region" {
